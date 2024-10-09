@@ -1,0 +1,24 @@
+<section class="section-header">
+  <h1>Smell Search
+    <sup class="tooltip">&#9432;
+    <div class="bottom">
+        <h3>Smell Search</h3>
+        <p>Here, you can search for materials which are typically responsible for particular smells.</p>
+        <i></i>
+    </div>
+  </sup>
+  </h1><h1 class="current-smell"></h1>
+</section>
+
+<section class="smell-search">
+  <div id="perfumery-materials-list" class="smells-list">
+      <!-- Listbox populated with perfumery material names will be dynamically generated here -->
+      <div *ngFor="let smell of smellsArray" class="list-item" (click)="materialNameClick($event)">{{smell}}</div>
+      <span id="placeholder" class="placeholder">Search for smells to display their most relevant materials.</span>
+  </div>
+</section>
+
+<section>
+  <app-search (newSmellItemsEvent)="newSmellItemsAdded($event)" (currentSmellUpdatedEvent)="currentSmellUpdated($event)" class="search-component" searchType="smell"></app-search>
+</section>
+

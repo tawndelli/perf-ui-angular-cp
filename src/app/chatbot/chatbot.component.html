@@ -1,0 +1,17 @@
+<section class="section-header">
+  <h1>Assistant <sup class="tooltip">&#9432;
+    <div class="bottom">
+        <h3>Perfumery Assistant</h3>
+        <p>Here, you can ask the assistant questions pertaining to any aspect of perfumery.<br><br>The more specific the question, the more informative the response.</p>
+        <i></i>
+    </div>
+  </sup></h1>
+</section>
+
+<div class="chatbot-messages" id="chatbot-messages">
+  <!-- Chatbot messages will be displayed here -->
+</div>
+
+<section>
+  <app-search class="search-component" (newAssistantMessageEvent)="newAssistantMessageReceived($event)" (newUserMessageEvent)="newUserMessageSent($event)"></app-search>
+</section>

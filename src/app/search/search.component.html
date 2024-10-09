@@ -1,0 +1,5 @@
+<input type="text" #searchInput id="search-input" placeholder={{placeholderText}} class="search-input" (keydown)="onInputKeyDown($event)">
+<button #searchBtn id="search-btn" class="search-btn" (click)="onSearch(searchInput.value)">
+    <span class="spinner"></span>
+    <span class="search-btn-text">Search</span>
+</button>

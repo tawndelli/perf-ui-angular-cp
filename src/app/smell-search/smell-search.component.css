@@ -1,0 +1,26 @@
+.smell-search {
+  display: flex;
+  flex-direction: column;
+}
+
+.smells-list {
+  height: 100%;
+  border: 2px solid #444;
+  background-color: #999;
+  border-radius: 5px;
+  text-align: center;
+  align-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  overflow-y: auto;
+}
+
+.current-smell{
+  color: #ffd000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-style: italic;
+}

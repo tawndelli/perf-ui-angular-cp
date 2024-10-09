@@ -1,0 +1,46 @@
+<section>
+  <div id="mastHead" class="mastHead">
+    <div class="leftLogoDiv">
+      <object data="/assets/letter-uppercase-p.svg" type="image/svg+xml" class="logo filter-yellow"></object>
+      <div class="logoDiv">
+        <h1>Perf</h1>
+        <sub>Perfumery Assistant</sub>
+      </div>
+    </div>
+
+    <div class="aboutDiv">
+      <p (click)="aboutClick()">About Perf</p>
+    </div>
+  </div>
+</section>
+<main class="main">
+  <div id="splashDiv" class="splashDiv" [class.active]="splashVisible">
+    <object data="/assets/letter-uppercase-p.svg" type="image/svg+xml" class="logo filter-yellow"></object>
+    <hr class="aboutHorizontalRule">
+    <p>Perf is an AI powered Angular application developed in order to assist you with perfumery related questions.</p>
+    <p>You may perform searches based on smells, perfumery materials, sample demo formulas, or chat with the AI assistant
+      about anything related to perfumery!</p>
+    <button class="splashCloseBtn" (click)="aboutClose()">close</button>
+  </div>
+  <section>
+    <div id="burger" class="burger" (click)="toggleMenu()">
+      &#9776; <!-- Hamburger Icon -->
+    </div>
+    <nav id="navMenu" [class.active]="menuActive">
+      <ul>
+        <li id="smellSection" class="burgerListItem" (click)="toggleSection('smellSection')">Smell Search</li>
+        <li id="formulaSection" class="burgerListItem" (click)="toggleSection('formulaSection')">Formula Search</li>
+        <li id="assistantSection" class="burgerListItem" (click)="toggleSection('assistantSection')">Assistant</li>
+      </ul>
+    </nav>
+  </section>
+  <section class="component">
+    <app-smell-search class="smell-search"></app-smell-search>
+  </section>
+  <section class="formula-container component">
+    <app-formula-search class="formula-search"></app-formula-search>
+  </section>
+   <section class="component">
+    <app-chatbot class="assistant"></app-chatbot>
+  </section>
+</main>

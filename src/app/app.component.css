@@ -1,0 +1,197 @@
+.mastHead{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  justify-content: space-between;
+}
+
+.mastHead h1{
+  color: #dab200;
+  font-size: 2rem;
+}
+
+.mastHead sub{
+  color: #666;
+  font-size: .75rem;
+  margin-top: -10px;
+  margin-bottom: 8px;
+}
+
+.logo{
+  height: 65px;
+  margin-right: 5px;
+}
+
+.leftLogoDiv{
+  display: flex;
+  flex-direction: row;
+}
+
+.logoDiv{
+  display: flex;
+  flex-direction: column;
+  margin-left: -5px;
+}
+
+.aboutDiv{
+  color: #666;
+  font-size: .7rem;
+}
+
+.aboutDiv p:hover{
+  cursor: pointer;
+  color: #dab200;
+  transform: scale(1.15);
+  transition: all .2s ease-out;
+}
+
+.aboutHorizontalRule{
+  width: 70%;
+}
+
+.filter-yellow {
+  filter: invert(72%) sepia(68%) saturate(1691%) hue-rotate(3deg) brightness(108%) contrast(104%);
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.splashDiv{
+  opacity: 0;
+  padding: 60px;
+  color: #999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #333;
+  width: 50%;
+  max-width: 600px;
+  height: 400px;
+  z-index: 99999;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 33%;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.3),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  transition: all 0.3s ease-out;
+}
+
+.splashDiv.active{
+  opacity: 1;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  transition: all 0.3s ease-in;
+}
+
+.splashCloseBtn{
+  width: 60px;
+  height: 30px;
+  color: #333;
+  font-size: 1rem;
+  background-color: #ccc;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: transparent;
+  box-shadow: none;
+  align-self: end;
+}
+
+.splashCloseBtn:hover{
+  cursor: pointer;
+  background-color: #dab200;
+}
+
+.burger {
+  display: none;
+}
+
+nav {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .burger {
+    font-size: 20px;
+    cursor: pointer;
+    color: #999;
+    display: flex;
+    margin-left: 12px;
+  }
+
+  .burger:hover {
+    color: #dab200;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    left: -260px;
+    width: 250px;
+    height: 100%;
+    z-index: 1;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -webkit-transition-duration: 0.3s;
+        -moz-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+    border-radius: 0px 5px;
+  }
+
+  nav.active {
+    display: flex;
+    left: 0px;
+    -webkit-transition-duration: 0.3s;
+      -moz-transition-duration: 0.3s;
+      -o-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  nav ul li{
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    color: #ccc;
+    text-decoration: none;
+    display: flex;
+  }
+
+  nav ul li:hover{
+    background-color: #ffd000;
+    color: #666
+  }
+
+  nav ul li.selected{
+    color:#666;
+  }
+}

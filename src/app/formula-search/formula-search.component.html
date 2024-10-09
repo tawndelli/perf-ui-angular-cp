@@ -1,0 +1,35 @@
+<section class="section-header">
+  <h1>Formula Search
+    <sup class="tooltip">&#9432;
+    <div class="bottom">
+        <h3>Formula Search</h3>
+        <p>Here, you can search for demo formulas which contain a particular material, or you may search for a specific term in the formula title.</p>
+        <i></i>
+    </div>
+  </sup>
+  </h1><h1 class="current-material"></h1>
+</section>
+
+<section class="formulas-list-section">
+  <div id="formulas-list">
+  <!-- List of formula names -->
+  <span class="placeholder">Search for materials to display a list of relevant formulas.</span>
+  </div>
+  <div class="formula-grid">
+      <table>
+        <thead>
+          <tr>
+            <th>Material</th>
+            <th class="amount-header">Amount</th>
+          </tr>
+        </thead>
+        <tbody id="formula-grid-body">
+          <!-- Data rows will be dynamically generated here -->
+        </tbody>
+      </table>
+  </div>
+</section>
+
+<section>
+  <app-search class="search-component" (newFormulaItemsEvent)="newFormulaItemsAdded($event.materialName, $event.formulaData)" searchType="material"></app-search>
+</section>
